@@ -9,14 +9,16 @@
           "name": "fileA.txt",
           "size": "10 KB",
           "type": "file",
-          "fileType": "text/plain"
+          "fileType": "text/plain",
+          "url": "s3_bucket_url"
         },
         {
           "id": "22",
           "name": "fileB.jpg",
           "size": "100 KB",
           "type": "file",
-          "fileType": "image/jpeg"
+          "fileType": "image/jpeg",
+          "url": "s3_bucket_url"
         },
         {
           "id": "2",
@@ -34,7 +36,8 @@
               "name": "fileC.txt",
               "size": "50 KB",
               "type": "file",
-              "fileType": "text/plain"
+              "fileType": "text/plain",
+              "url": "s3_bucket_url"
             }
           ]
         }

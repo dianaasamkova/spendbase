@@ -4,6 +4,7 @@ export interface File {
     size: string;
     type: string;
     fileType: string;
+    url: string;
 }
 
 export interface Folder {
