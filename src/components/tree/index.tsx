@@ -1,18 +1,18 @@
-import React, {useCallback, useEffect, useMemo, useState} from 'react';
+import React, {useCallback, useEffect, useMemo, useState} from "react";
 import {SimpleTreeView} from "@mui/x-tree-view";
-import data from './response.json'
+import data from "./response.json"
 import {buildTree, searchFolders, getFoldersAndFilesIds} from "./handlers";
 import {BackendResponse, Folder} from "./definitions";
 import {Box, Typography} from "@mui/material";
 import Search from "../search";
-import debounce from 'lodash.debounce';
+import debounce from "lodash.debounce";
 
 const TreeView: React.FC = () => {
     const [expandedItems, setExpandedItems] = useState<string[]>([]);
     const [selectedItems, setSelectedItems] = useState<string[]>([]);
     const [folders, setFolders] = useState<Folder[]>([]);
-    const [inputValue, setInputValue] = useState<string>('');
-    const [search, setSearch] = useState<string>('');
+    const [inputValue, setInputValue] = useState<string>("");
+    const [search, setSearch] = useState<string>("");
 
     const allFoldersAndFilesIds = useMemo(() => getFoldersAndFilesIds(folders), [folders]);
     const tree = useMemo(() => {
@@ -79,7 +79,7 @@ const TreeView: React.FC = () => {
                 selectedItems={selectedItems}
                 onSelectedItemsChange={handleSelectedItemsChange}
                 aria-label="file system navigator"
-                sx={{flexGrow: 1, maxWidth: 400, overflowY: 'auto'}}
+                sx={{flexGrow: 1, maxWidth: 400, overflowY: "auto"}}
                 multiSelect
             >
                 {tree}

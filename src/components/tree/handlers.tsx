@@ -3,7 +3,7 @@ import {CustomTreeItem} from "./styles";
 
 export function buildTree(tree: (File | Folder)[]) {
     return tree.map((folder: File | Folder) => {
-        const children = 'children' in folder && folder.children.length > 0 && buildTree(folder?.children);
+        const children = "children" in folder && folder.children.length > 0 && buildTree(folder?.children);
         return (
             <CustomTreeItem key={folder.id} itemId={folder.id} label={folder.name}>
                 {children}
@@ -18,7 +18,7 @@ export const searchFolders = (folders: (Folder | File)[], search: string): (Fold
     folders.forEach((item) => {
         const matchName = item?.name?.toLowerCase().includes(search.toLowerCase());
 
-        if ('children' in item && item.children.length > 0) {
+        if ("children" in item && item.children.length > 0) {
             const filteredChildren = searchFolders(item.children, search);
             if (filteredChildren.length > 0 || matchName) {
                 filteredRows.push({...item, children: filteredChildren});
@@ -35,7 +35,7 @@ export const getFoldersAndFilesIds = (folders: (Folder | File)[]): string[] => {
     const ids: string[] = [];
 
     folders.forEach((item) => {
-        if ('children' in item && item.children.length > 0) {
+        if ("children" in item && item.children.length > 0) {
             const childrenIds = getFoldersAndFilesIds(item.children);
             ids.push(...childrenIds);
         }

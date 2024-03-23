@@ -8,7 +8,7 @@ export const CustomTreeItem = styled(TreeItem)(({ theme }) => ({
         margin: theme.spacing(0.2, 0),
     },
     [`& .${treeItemClasses.iconContainer}`]: {
-        '& .close': {
+        "& .close": {
             opacity: 0.3,
         },
     },

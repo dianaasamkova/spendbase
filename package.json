@@ -32,7 +32,13 @@
     "extends": [
       "react-app",
       "react-app/jest"
-    ]
+    ],
+    "rules": {
+      "quotes": [
+        "warn",
+        "double"
+      ]
+    }
   },
   "browserslist": {
     "production": [
@@ -47,6 +53,7 @@
     ]
   },
   "devDependencies": {
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
     "@types/lodash.debounce": "^4.0.9"
   }
 }
